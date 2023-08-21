@@ -21,7 +21,7 @@ if __name__ == "__main__":
                     comp = task.get('completed')
                     tit = task.get('title')
                     task_list.append(
-                        dict(task=tit, completed=comp, username=username))
+                        dict(username=username, task=tit, completed=comp))
             user_dict[employee.get('id')] = task_list
 
         json.dump(user_dict, f)
