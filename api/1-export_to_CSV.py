@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     with open(f"{argv[1]}.csv", 'w', encoding="utf-8") as f:
         for task in to_do.json():
-            comp = task.get('comlpeted')
-            tit = task.get("""title""")
+            comp = task.get('completed')
+            tit = task.get('title')
             f.write(
                 f'"{argv[1]}","{username}","{comp}","{tit}" \n')
