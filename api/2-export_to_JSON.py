@@ -15,12 +15,10 @@ if __name__ == "__main__":
         task_list = []
         user_dict = {}
         user_dict[f"{argv[1]}"] = task_list
-        
+
         for task in to_do.json():
             comp = task.get('completed')
             tit = task.get('title')
-            task_list.append(dict(task = tit, completed = comp, username = username))
-        
+            task_list.append(dict(task=tit, completed=comp, username=username))
+
         json.dump(user_dict, f)
-        
-                
